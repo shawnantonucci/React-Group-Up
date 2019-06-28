@@ -5,7 +5,7 @@ const ChatPanel = () => {
     return (
         <div className="ChatPanel">
             <div>Room 1</div>
-            <div>messages</div>
+            <div style={{flexGrow: 1}}>messages</div>
             <div>send messages</div>
         </div>
     )

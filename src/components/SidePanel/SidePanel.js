@@ -1,15 +1,14 @@
 import React from 'react';
 import './SidePanel.css'
+import User from './User'
+import Rooms from './Rooms'
 
 const SidePanel = () => {
     return (
         <div className="SidePanel">
             <div>Group-Up</div>
-            <div>Shawn</div>
-            <ul>
-                <li>Room 1</li>
-                <li>Room 2</li>
-            </ul>
+            <User />
+            <Rooms />
         </div>
     )
 }

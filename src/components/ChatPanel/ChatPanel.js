@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ChatPanel.css";
 import firebase from "../../logic/firebase";
+import CurrentRoom from "./CurrentRoom";
+import Messages from "./Messages";
+import SendMessage from "./SendMessage";
 
 const ChatPanel = () => {
     const [messages, setMessages] = useState([]);
@@ -11,17 +14,17 @@ const ChatPanel = () => {
     const messagesRefFirebase = firebase.database().ref("messages");
 
     const addMessagesListener = () => {
-        console.log("addMessagesListener")
+        console.log("addMessagesListener");
         messagesRefFirebase.on("child_added", snap => {
             console.log(snap.val());
             const newMessages = [...refTo_messagesVariable.current];
-            newMessages.push(snap.val())
+            newMessages.push(snap.val());
             setMessages(newMessages);
         });
     };
 
     const removeMessagesListener = () => {
-        console.log("removeMessagesListener")
+        console.log("removeMessagesListener");
         messagesRefFirebase.off();
     };
 
@@ -29,37 +32,13 @@ const ChatPanel = () => {
         addMessagesListener();
 
         return () => removeMessagesListener();
-    }, [])
-
-    const messagesElements = (
-        <ul>
-            {messages.map((item, index) => (
-                <li key={index}>{item.text}</li>
-            ))}
-        </ul>
-    );
+    }, []);
 
     return (
         <div className="ChatPanel">
-            <div>Room 1</div>
-            <div style={{ flexGrow: 1 }}>{messagesElements}</div>
-            <div style={{ display: "flex" }}>
-                <input
-                    style={{ flexGrow: 1 }}
-                    placeholder="insert message ..."
-                />
-                <button
-                    onClick={() =>
-                        messagesRefFirebase
-                            .child("id2")
-                            .set({ text: "some text 2" })
-                            .then(msg => console.log(`set success : ${msg}`))
-                            .catch(err => console.log(`set error : ${err}`))
-                    }
-                >
-                    Send Message
-                </button>
-            </div>
+            <CurrentRoom />
+            <Messages messages={messages} />
+            <SendMessage messagesRefFirebase={messagesRefFirebase}/>
         </div>
     );
 };

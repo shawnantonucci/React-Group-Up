@@ -1,9 +1,10 @@
 import React from "react";
+import "./SendMessage.css"
 
 const SendMessage = ({messagesRefFirebase}) => {
     return (
-        <div style={{ display: "flex" }}>
-            <input style={{ flexGrow: 1 }} placeholder="insert message ..." />
+        <div className="SendMessage" >
+            <input placeholder="insert message ..." />
             <button
                 onClick={() =>
                     messagesRefFirebase

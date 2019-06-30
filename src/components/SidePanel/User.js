@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useContext } from "react";
+import UserContext from "../../context/UserContext";
 
 const User = () => {
-    return (
-        <div>
-            Shawn
-        </div>
-    )
-}
+    const { user } = useContext(UserContext);
+    return <div>{user.displayName}</div>;
+};
 
-export default User
+export default User;

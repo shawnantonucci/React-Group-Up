@@ -6,7 +6,7 @@ import Rooms from "./Rooms";
 const SidePanel = () => {
   return (
     <div className="SidePanel">
-      <div>ChatApp header</div>
+      <div>- GroupUp -</div>
       <User />
       <Rooms />
     </div>

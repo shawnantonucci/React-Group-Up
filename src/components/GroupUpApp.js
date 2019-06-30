@@ -1,35 +1,31 @@
 import React, { useState } from "react";
 import SidePanel from "./SidePanel/SidePanel";
 import ChatPanel from "./ChatPanel/ChatPanel";
-import "./ChatApp.css";
+import "./GroupUpApp.css";
 import CurrentRoomContext from "../context/CurrentRoomContext";
 import UserContext from "../context/UserContext";
 
-const ChatApp = () => {
-   // --- todo use null after user login
+const GroupUpApp = () => {
+  // --- todo use null after user login
   const [user, setUser] = useState({
     displayName: "Nathan",
     photoURL: "",
     uid: "id nathan"
   });
 
-  // --- todo use null after room selected logic
-  const [currentRoom, setCurrentRoom] = useState({
-    id: "idroom1",
-    name: "room1",
-    description: "room1 description"
-  });
+
+  const [currentRoom, setCurrentRoom] = useState(null);
 
   return (
-    <div className="ChatApp">
+    <div className="GroupUpApp">
       <UserContext.Provider value={{ user, setUser }}>
         <CurrentRoomContext.Provider value={{ currentRoom, setCurrentRoom }}>
           <SidePanel />
-          <ChatPanel />
+          {currentRoom ? <ChatPanel /> : <h3>Please choose a chat room</h3>}
         </CurrentRoomContext.Provider>
       </UserContext.Provider>
     </div>
   );
 };
 
-export default ChatApp;
+export default GroupUpApp;

@@ -3,7 +3,7 @@ import UserContext from "../../context/UserContext";
 
 const User = () => {
   const { user } = useContext(UserContext);
-  return <div>{user.displayName}</div>;
+  return <div>Welcome {user.displayName}</div>;
 };
 
 export default User;

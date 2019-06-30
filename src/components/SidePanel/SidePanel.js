@@ -1,16 +1,16 @@
-import React from 'react';
-import './SidePanel.css'
-import User from './User'
-import Rooms from './Rooms'
+import React from "react";
+import "./SidePanel.css";
+import User from "./User";
+import Rooms from "./Rooms";
 
 const SidePanel = () => {
-    return (
-        <div className="SidePanel">
-            <div>Group-Up</div>
-            <User />
-            <Rooms />
-        </div>
-    )
-}
+  return (
+    <div className="SidePanel">
+      <div>ChatApp header</div>
+      <User />
+      <Rooms />
+    </div>
+  );
+};
 
-export default SidePanel
+export default SidePanel;

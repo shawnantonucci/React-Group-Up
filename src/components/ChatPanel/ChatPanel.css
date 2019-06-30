@@ -1,7 +1,7 @@
 .ChatPanel {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: aqua;
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: aqua;
+  padding: 5px;
 }

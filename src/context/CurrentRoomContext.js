@@ -1,5 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const CurrentRoomContext = React.createContext()
+/*
+current room object :
+  id
+  name
+  description
 
-export default CurrentRoomContext;
+*/
+
+const CurrentRoomContext = React.createContext();
+export default CurrentRoomContext ;

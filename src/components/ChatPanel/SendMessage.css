@@ -1,8 +1,9 @@
 .SendMessage {
-  display: flex;
+    display: flex;
+    /* background-color: #fefefe; */
+    padding: 5px;
 }
 
-
-.SendMessage > input{
-    flex-grow: 1
+.SendMessage > input {
+    flex-grow: 1;
 }

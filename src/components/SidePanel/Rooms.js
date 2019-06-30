@@ -62,32 +62,8 @@ const Rooms = () => {
   return (
     <div>
       <button onClick={addRoom}>Add Room</button>
-      <p>rooms ({rooms.length})</p>
+      <h4>rooms ({rooms.length})</h4>
       {roomsElements}
-      {/* <ul> */}
-      {/* <li
-          onClick={() =>
-            setCurrentRoom({
-              id: "idroom1",
-              name: "room1",
-              description: "desc1"
-            })
-          }
-        >
-          room1
-        </li>
-        <li
-          onClick={() =>
-            setCurrentRoom({
-              id: "idroom2",
-              name: "room2",
-              description: "desc2"
-            })
-          }
-        >
-          room2
-        </li> */}
-      {/* </ul> */}
     </div>
   );
 };

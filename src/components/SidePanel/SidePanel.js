@@ -6,7 +6,7 @@ import Rooms from "./Rooms";
 const SidePanel = () => {
   return (
     <div className="SidePanel">
-      <div>- GroupUp -</div>
+      <h2>GroupUp</h2>
       <User />
       <Rooms />
     </div>

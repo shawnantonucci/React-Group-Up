@@ -9,7 +9,7 @@ const GroupUpApp = () => {
   // --- todo use null after user login
   const [user, setUser] = useState({
     displayName: "Nathan",
-    photoURL: "",
+    photoURL: "https://cdn.pixabay.com/photo/2014/04/03/10/32/businessman-310819_960_720.png",
     uid: "id nathan"
   });
 

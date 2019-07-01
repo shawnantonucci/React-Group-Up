@@ -5,6 +5,7 @@ import "./User.css"
 
 const User = () => {
     const { user } = useContext(UserContext);
+
     return (
         <div className="User">
             <Image src={user.photoURL} avatar/>

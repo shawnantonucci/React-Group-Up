@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import ChatApp from "../components/ChatApp";
+import ChatApp from "./ChatApp";
 import Login from "../components/Auth/Login";
 import Register from "../components/Auth/Register";
 import UserContext from "../context/UserContext";

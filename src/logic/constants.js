@@ -1,2 +1,2 @@
-export const appName = "GroupUp"
-export const appIconName = "wechat"
+export const appName = "Group Up";
+export const appIconName = "wechat";

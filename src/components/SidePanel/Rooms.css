@@ -1,12 +1,12 @@
 .Rooms , li {
-    cursor: pointer;
+    cursor : pointer
 }
 
 .rooms-header {
-    display: flex;
-    margin-top: 10px;
+  display: flex;
+  margin-top: 10px;
 }
 
 .rooms-header > h4 {
-    margin-right: 10px;
+  margin-right: 10px;
 }
